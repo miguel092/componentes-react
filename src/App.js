@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './componentes/header'
+import Footer from './componentes/footer'
+import NavBar from './componentes/nav'
+import Article from './componentes/article'
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <NavBar></NavBar>
+      <Article titulo={"Titulo del artículo 1"} contenido={"Este articulo es para ilustrar los componentes que se pueden crear con react"}></Article>
+      <Article titulo={"Titulo del artículo 2"} contenido={"Contenido de ejemplo, relacionado al articulo 2"} 
+              section={true} subtitulo={"Subtitulo del articulo 2"} subcontenido={"Este párrafo pertenece al articulo numero 2 como una seccion del mismo"}></Article>
+      <Footer></Footer>
     </div>
   );
 }
